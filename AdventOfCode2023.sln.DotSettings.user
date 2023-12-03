@@ -1,19 +1,13 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=796a9358_002D3901_002D4605_002D8543_002Db4679a5cbec8/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Part1Test" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c3b2006c_002Df4e4_002D484b_002D8d01_002D475c9e07d31d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Part2Test" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
-    &lt;TestId&gt;NUnit3x::996B21AE-B7F7-4B85-BDCB-48CBC57BD5AA::net8.0::AdventOfCode2023Tests.Days.Day01Tests&lt;/TestId&gt;
-    &lt;TestId&gt;NUnit3x::996B21AE-B7F7-4B85-BDCB-48CBC57BD5AA::net8.0::AdventOfCode2023Tests.Days.Day02Tests.Part1Test&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::996B21AE-B7F7-4B85-BDCB-48CBC57BD5AA::net8.0::AdventOfCode2023Tests.Days.Day03Tests&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9bd62bb0_002D3265_002D42cc_002Dad57_002D95a686630c69/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GetPart2CalibrationValue_overlappingWords #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
-  &lt;TestAncestor&gt;
-    &lt;TestId&gt;NUnit3x::996B21AE-B7F7-4B85-BDCB-48CBC57BD5AA::net8.0::AdventOfCode2023Tests.Days.Day01Tests&lt;/TestId&gt;
-    &lt;TestId&gt;NUnit3x::996B21AE-B7F7-4B85-BDCB-48CBC57BD5AA::net8.0::AdventOfCode2023Tests.Days.Day02Tests.Part1Test&lt;/TestId&gt;
-  &lt;/TestAncestor&gt;
-&lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=dba82283_002Da553_002D4db9_002D8fb6_002D274bc97d28fb/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Part1Test #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=dba82283_002Da553_002D4db9_002D8fb6_002D274bc97d28fb/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Part1Test #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;NUnit3x::996B21AE-B7F7-4B85-BDCB-48CBC57BD5AA::net8.0::AdventOfCode2023Tests.Days.Day02Tests&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::996B21AE-B7F7-4B85-BDCB-48CBC57BD5AA::net8.0::AdventOfCode2023Tests.Days.Day03Tests.Part1Test&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::996B21AE-B7F7-4B85-BDCB-48CBC57BD5AA::net8.0::AdventOfCode2023Tests.Days.Day03Tests&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
