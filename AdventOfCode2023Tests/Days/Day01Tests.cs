@@ -10,13 +10,13 @@ public class Day01Tests
     [Test]
     public void Part1Test()
     {
-        Assert.That(_systemUnderTest.Part1("TestData/1a.txt"), Is.EqualTo(142));
+        Assert.That(_systemUnderTest.Part1("TestData/1a.txt"), Is.EqualTo("142"));
     }
 
     [Test]
     public void Part2Test()
     {
-        Assert.That(_systemUnderTest.Part2("TestData/1b.txt"), Is.EqualTo(281));
+        Assert.That(_systemUnderTest.Part2("TestData/1b.txt"), Is.EqualTo("281"));
     }
 
     [TestCase("treb7uchet", 77, Description = "one digit")]

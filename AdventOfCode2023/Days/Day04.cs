@@ -6,14 +6,15 @@ public class Day04 : DayBase
 {
     public override int Day => 4;
 
-    protected override int Part1(IEnumerable<string> inputData)
+    protected override string Part1(IEnumerable<string> inputData)
     {
         return inputData
             .Select(ParseCard)
-            .Sum(x => x.Points);
+            .Sum(x => x.Points)
+            .ToString();
     }
 
-    protected override int Part2(IEnumerable<string> inputData)
+    protected override string Part2(IEnumerable<string> inputData)
     {
         var cardDictionary = inputData
             .Select(ParseCard)
@@ -21,7 +22,7 @@ public class Day04 : DayBase
 
         PerformCardCopying(cardDictionary);
 
-        return cardDictionary.Sum(x => x.Value.CopiesHeld);
+        return cardDictionary.Sum(x => x.Value.CopiesHeld).ToString();
     }
 
     private static void PerformCardCopying(IDictionary<int, Card> cardDictionary)

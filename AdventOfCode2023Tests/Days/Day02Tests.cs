@@ -10,12 +10,12 @@ public class Day02Tests
     [Test]
     public void Part1Test()
     {
-        Assert.That(_systemUnderTest.Part1("TestData/2.txt"), Is.EqualTo(8));
+        Assert.That(_systemUnderTest.Part1("TestData/2.txt"), Is.EqualTo("8"));
     }
 
     [Test]
     public void Part2Test()
     {
-        Assert.That(_systemUnderTest.Part2("TestData/2.txt"), Is.EqualTo(2286));
+        Assert.That(_systemUnderTest.Part2("TestData/2.txt"), Is.EqualTo("2286"));
     }
 }

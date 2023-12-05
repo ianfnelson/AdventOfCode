@@ -10,7 +10,7 @@ public class Day04Tests
     [Test]
     public void Part1Test()
     {
-        Assert.That(_systemUnderTest.Part1("TestData/4.txt"), Is.EqualTo(13));
+        Assert.That(_systemUnderTest.Part1("TestData/4.txt"), Is.EqualTo("13"));
     }
 
     [Test]
@@ -31,6 +31,6 @@ public class Day04Tests
     [Test]
     public void Part2Test()
     {
-        Assert.That(_systemUnderTest.Part2("TestData/4.txt"), Is.EqualTo(30));
+        Assert.That(_systemUnderTest.Part2("TestData/4.txt"), Is.EqualTo("30"));
     }
 }

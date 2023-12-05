@@ -12,18 +12,20 @@ public class Day01 : DayBase
 
     public override int Day => 1;
 
-    protected override int Part1(IEnumerable<string> inputData)
+    protected override string Part1(IEnumerable<string> inputData)
     {
         return inputData
             .Select(GetPart1CalibrationValue)
-            .Sum(x => x);
+            .Sum(x => x)
+            .ToString();
     }
 
-    protected override int Part2(IEnumerable<string> inputData)
+    protected override string Part2(IEnumerable<string> inputData)
     {
         return inputData
             .Select(GetPart2CalibrationValue)
-            .Sum(x => x);
+            .Sum(x => x)
+            .ToString();
     }
 
     public static int GetPart1CalibrationValue(string inputLine)

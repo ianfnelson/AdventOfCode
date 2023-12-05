@@ -4,22 +4,24 @@ public class Day02 : DayBase
 {
     public override int Day => 2;
 
-    protected override int Part1(IEnumerable<string> inputData)
+    protected override string Part1(IEnumerable<string> inputData)
     {
         var initialSelection = new Selection { Red = 12, Green = 13, Blue = 14 };
 
         return inputData
             .Select(ParseGame)
             .Where(game => IsPossible(game, initialSelection))
-            .Sum(game => game.Id);
+            .Sum(game => game.Id)
+            .ToString();
     }
 
-    protected override int Part2(IEnumerable<string> inputData)
+    protected override string Part2(IEnumerable<string> inputData)
     {
         return inputData
             .Select(ParseGame)
             .Select(MinimumViableSelection)
-            .Sum(x => x.Power);
+            .Sum(x => x.Power)
+            .ToString();
     }
 
     private static bool IsPossible(Game game, Selection initial)

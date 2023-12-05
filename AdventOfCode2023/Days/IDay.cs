@@ -4,6 +4,6 @@ public interface IDay
 {
     int Day { get; }
 
-    int Part1(string path);
-    int Part2(string path);
+    string Part1(string path);
+    string Part2(string path);
 }

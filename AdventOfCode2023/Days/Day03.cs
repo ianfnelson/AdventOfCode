@@ -7,20 +7,22 @@ public class Day03 : DayBase
 {
     public override int Day => 3;
 
-    protected override int Part1(IEnumerable<string> inputData)
+    protected override string Part1(IEnumerable<string> inputData)
     {
         return ParseSchematic(inputData.ToList())
             .Numbers
             .Where(sn => sn.IsPartNumber)
-            .Sum(x => x.Value);
+            .Sum(x => x.Value)
+            .ToString();
     }
 
-    protected override int Part2(IEnumerable<string> inputData)
+    protected override string Part2(IEnumerable<string> inputData)
     {
         return ParseSchematic(inputData.ToList())
             .Asterisks
             .Where(x => x.IsGear)
-            .Sum(x => x.GearRatio);
+            .Sum(x => x.GearRatio)
+            .ToString();
     }
 
     private static Schematic ParseSchematic(IReadOnlyList<string> inputData)
