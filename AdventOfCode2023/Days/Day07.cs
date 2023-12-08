@@ -34,7 +34,7 @@ public class Day07 : DayBase
 
     protected override string Part1(IEnumerable<string> inputData)
     {
-        return DoPuzzle(inputData, false, card => card.RatingRegularS);
+        return DoPuzzle(inputData, false, card => card.RatingRegular);
     }
 
     protected override string Part2(IEnumerable<string> inputData)
