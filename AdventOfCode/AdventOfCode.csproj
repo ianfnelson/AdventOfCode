@@ -112,6 +112,74 @@
       <Content Include="Events\2024\InputFiles\24.txt">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
+      <None Remove="Events\2023\InputFiles\1.txt" />
+      <Content Include="Events\2023\InputFiles\1.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2023\InputFiles\2.txt" />
+      <Content Include="Events\2023\InputFiles\2.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2023\InputFiles\3.txt" />
+      <Content Include="Events\2023\InputFiles\3.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2023\InputFiles\4.txt" />
+      <Content Include="Events\2023\InputFiles\4.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2023\InputFiles\5.txt" />
+      <Content Include="Events\2023\InputFiles\5.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2023\InputFiles\6.txt" />
+      <Content Include="Events\2023\InputFiles\6.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2023\InputFiles\7.txt" />
+      <Content Include="Events\2023\InputFiles\7.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2023\InputFiles\8.txt" />
+      <Content Include="Events\2023\InputFiles\8.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2023\InputFiles\9.txt" />
+      <Content Include="Events\2023\InputFiles\9.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2023\InputFiles\10.txt" />
+      <Content Include="Events\2023\InputFiles\10.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2023\InputFiles\11.txt" />
+      <Content Include="Events\2023\InputFiles\11.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2023\InputFiles\13.txt" />
+      <Content Include="Events\2023\InputFiles\13.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2023\InputFiles\14.txt" />
+      <Content Include="Events\2023\InputFiles\14.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2023\InputFiles\15.txt" />
+      <Content Include="Events\2023\InputFiles\15.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2023\InputFiles\16.txt" />
+      <Content Include="Events\2023\InputFiles\16.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2023\InputFiles\19.txt" />
+      <Content Include="Events\2023\InputFiles\19.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2023\InputFiles\24.txt" />
+      <Content Include="Events\2023\InputFiles\24.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
     </ItemGroup>
 
 </Project>
