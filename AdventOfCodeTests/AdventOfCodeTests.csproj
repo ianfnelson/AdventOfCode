@@ -24,4 +24,15 @@
       <ProjectReference Include="..\AdventOfCode\AdventOfCode.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Events\2021\Puzzles\" />
+      <Folder Include="Events\2021\TestData\" />
+      <Folder Include="Events\2022\InputFiles\" />
+      <Folder Include="Events\2022\Puzzles\" />
+      <Folder Include="Events\2023\InputFiles\" />
+      <Folder Include="Events\2023\Puzzles\" />
+      <Folder Include="Events\2024\InputFiles\" />
+      <Folder Include="Events\2024\Puzzles\" />
+    </ItemGroup>
+
 </Project>
