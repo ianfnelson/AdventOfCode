@@ -25,14 +25,136 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Events\2021\Puzzles\" />
+      <Folder Include="Events\2021\Days\" />
       <Folder Include="Events\2021\TestData\" />
-      <Folder Include="Events\2022\InputFiles\" />
-      <Folder Include="Events\2022\Puzzles\" />
-      <Folder Include="Events\2023\InputFiles\" />
-      <Folder Include="Events\2023\Puzzles\" />
-      <Folder Include="Events\2024\InputFiles\" />
-      <Folder Include="Events\2024\Puzzles\" />
+      <Folder Include="Events\2022\TestData\" />
+      <Folder Include="Events\2022\Days\" />
+      <Folder Include="Events\2023\TestData\" />
+      <Folder Include="Events\2023\Days\" />
+      <Folder Include="Events\2024\Days\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Events\2024\TestData\1.txt" />
+      <Content Include="Events\2024\TestData\1.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2024\TestData\2.txt" />
+      <Content Include="Events\2024\TestData\2.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2024\TestData\4.txt" />
+      <Content Include="Events\2024\TestData\4.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2024\TestData\5.txt" />
+      <Content Include="Events\2024\TestData\5.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2024\TestData\6.txt" />
+      <Content Include="Events\2024\TestData\6.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2024\TestData\7.txt" />
+      <Content Include="Events\2024\TestData\7.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2024\TestData\8.txt" />
+      <Content Include="Events\2024\TestData\8.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2024\TestData\9.txt" />
+      <Content Include="Events\2024\TestData\9.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2024\TestData\10.txt" />
+      <Content Include="Events\2024\TestData\10.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2024\TestData\12a.txt" />
+      <Content Include="Events\2024\TestData\12a.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2024\TestData\12b.txt" />
+      <Content Include="Events\2024\TestData\12b.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2024\TestData\12c.txt" />
+      <Content Include="Events\2024\TestData\12c.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2024\TestData\12d.txt" />
+      <Content Include="Events\2024\TestData\12d.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2024\TestData\12e.txt" />
+      <Content Include="Events\2024\TestData\12e.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2024\TestData\13.txt" />
+      <Content Include="Events\2024\TestData\13.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2024\TestData\14.txt" />
+      <Content Include="Events\2024\TestData\14.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2024\TestData\15a.txt" />
+      <Content Include="Events\2024\TestData\15a.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2024\TestData\15b.txt" />
+      <Content Include="Events\2024\TestData\15b.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2024\TestData\15c.txt" />
+      <Content Include="Events\2024\TestData\15c.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2024\TestData\15d.txt" />
+      <Content Include="Events\2024\TestData\15d.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2024\TestData\16a.txt" />
+      <Content Include="Events\2024\TestData\16a.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2024\TestData\16b.txt" />
+      <Content Include="Events\2024\TestData\16b.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2024\TestData\17a.txt" />
+      <Content Include="Events\2024\TestData\17a.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2024\TestData\17b.txt" />
+      <Content Include="Events\2024\TestData\17b.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2024\TestData\18.txt" />
+      <Content Include="Events\2024\TestData\18.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2024\TestData\19.txt" />
+      <Content Include="Events\2024\TestData\19.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2024\TestData\22.txt" />
+      <Content Include="Events\2024\TestData\22.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2024\TestData\23.txt" />
+      <Content Include="Events\2024\TestData\23.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2024\TestData\24a.txt" />
+      <Content Include="Events\2024\TestData\24a.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2024\TestData\24b.txt" />
+      <Content Include="Events\2024\TestData\24b.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
     </ItemGroup>
 
 </Project>
