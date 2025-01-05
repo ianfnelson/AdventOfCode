@@ -51,6 +51,6 @@ public class Day01 : DayBase
 
     private static string TranslatePart2MatchToDigit(string match)
     {
-        return Part2WordTranslations.TryGetValue(match, out var digit) ? digit : match;
+        return Part2WordTranslations.GetValueOrDefault(match, match);
     }
 }

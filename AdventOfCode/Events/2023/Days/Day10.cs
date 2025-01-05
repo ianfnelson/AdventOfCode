@@ -11,25 +11,17 @@ public class Day10 : DayBase
         {
             get
             {
-                switch (PipeType)
+                return PipeType switch
                 {
-                    case '|':
-                        return new[] { coordinates.North, coordinates.South };
-                    case '-':
-                        return new[] { coordinates.East, coordinates.West };
-                    case 'L':
-                        return new[] { coordinates.North, coordinates.East };
-                    case 'J':
-                        return new[] { coordinates.West, coordinates.North };
-                    case '7':
-                        return new[] { coordinates.West, coordinates.South };
-                    case 'F':
-                        return new[] { coordinates.South, coordinates.East };
-                    case '.':
-                        return Array.Empty<Coordinates>();
-                }
-
-                throw new InvalidDataException();
+                    '|' => new[] { coordinates.North, coordinates.South },
+                    '-' => new[] { coordinates.East, coordinates.West },
+                    'L' => new[] { coordinates.North, coordinates.East },
+                    'J' => new[] { coordinates.West, coordinates.North },
+                    '7' => new[] { coordinates.West, coordinates.South },
+                    'F' => new[] { coordinates.South, coordinates.East },
+                    '.' => Array.Empty<Coordinates>(),
+                    _ => throw new InvalidDataException()
+                };
             }
         }
     }

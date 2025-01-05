@@ -37,7 +37,7 @@ public class Day14 : DayBase
         return match.Item2.ToString();
     }
 
-    public Platform ParseInput(IEnumerable<string> inputData)
+    public static Platform ParseInput(IEnumerable<string> inputData)
     {
         var rocks = new List<Rock>();
         var y = 0;
