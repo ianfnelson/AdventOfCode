@@ -1,6 +1,5 @@
 ﻿using System.Diagnostics;
 using System.Reflection;
-using AdventOfCode.Common;
 using AdventOfCode.Framework;
 using Autofac;
 
@@ -8,7 +7,7 @@ var container = BuildContainer();
 
 var days = container.Resolve<IEnumerable<IDay>>();
 var day = GetDay();
-Console.WriteLine("Day " + day.Day);
+Console.WriteLine("Year " + day.Year + " Day " + day.Day);
 var inputPath = $"Events/{day.Year}/InputFiles/{day.Day}.txt";
 DoPart(1, () => day.Part1(inputPath));
 DoPart(2, () => day.Part2(inputPath));
