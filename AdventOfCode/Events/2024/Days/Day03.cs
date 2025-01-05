@@ -1,5 +1,4 @@
 using System.Text.RegularExpressions;
-using AdventOfCode.Common;
 
 namespace AdventOfCode.Events._2024.Days;
 

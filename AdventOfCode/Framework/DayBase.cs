@@ -1,5 +1,3 @@
-using AdventOfCode.Common;
-
 namespace AdventOfCode.Framework;
 
 public abstract class DayBase : IDay

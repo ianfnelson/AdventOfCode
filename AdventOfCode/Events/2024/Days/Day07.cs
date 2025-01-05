@@ -1,5 +1,3 @@
-using AdventOfCode.Common;
-
 namespace AdventOfCode.Events._2024.Days;
 
 public class Day07 : DayBase
