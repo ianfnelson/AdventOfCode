@@ -1,5 +1,4 @@
 using System.Diagnostics;
-using AdventOfCode.Common;
 
 namespace AdventOfCode.Events._2023.Days;
 

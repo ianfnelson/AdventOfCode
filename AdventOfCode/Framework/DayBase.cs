@@ -1,4 +1,6 @@
-namespace AdventOfCode.Common;
+using AdventOfCode.Common;
+
+namespace AdventOfCode.Framework;
 
 public abstract class DayBase : IDay
 {
@@ -6,6 +8,7 @@ public abstract class DayBase : IDay
     protected abstract string Part2(IEnumerable<string> inputData);
 
     public abstract int Day { get; }
+    public abstract int Year { get; }
 
     public string Part1(string path)
     {

@@ -1,5 +1,4 @@
 using System.Collections.Concurrent;
-using AdventOfCode.Common;
 
 namespace AdventOfCode.Events._2023.Days;
 

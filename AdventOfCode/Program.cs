@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using System.Reflection;
 using AdventOfCode.Common;
+using AdventOfCode.Framework;
 using Autofac;
 
 var container = BuildContainer();
@@ -8,7 +9,7 @@ var container = BuildContainer();
 var days = container.Resolve<IEnumerable<IDay>>();
 var day = GetDay();
 Console.WriteLine("Day " + day.Day);
-var inputPath = $"Events/2024/InputFiles/{day.Day}.txt";
+var inputPath = $"Events/{day.Year}/InputFiles/{day.Day}.txt";
 DoPart(1, () => day.Part1(inputPath));
 DoPart(2, () => day.Part2(inputPath));
 
@@ -23,10 +24,11 @@ IDay GetDay()
 {
     if (args.Length == 0)
     {
-        return days.MaxBy(x => x.Day) ?? throw new InvalidOperationException();
+        var maxDay = days.MaxBy(x => (x.Year, x.Day), Comparer<(int, int)>.Default);
+        return maxDay ?? throw new InvalidOperationException();
     }
 
-    return days.Single(x => x.Day == int.Parse(args[0]));
+    return days.Single(x => x.Year == int.Parse(args[0]) && x.Day == int.Parse(args[1]));
 }
 
 void DoPart(int partNumber, Func<string> partFunc)
