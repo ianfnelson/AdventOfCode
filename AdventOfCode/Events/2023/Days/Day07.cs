@@ -99,14 +99,14 @@ public class Day07 : DayBase
         
         // If all cards are jokers, return a hand of all aces.
         if (cards.All(x => x.Character == 'J'))
-            return new List<Card>
-            {
+            return
+            [
                 _cards['A'],
                 _cards['A'],
                 _cards['A'],
                 _cards['A'],
                 _cards['A']
-            };
+            ];
 
         // Find the best non-joker card in the hand. Jokers will imitate this card.
         var replacementCard = cards

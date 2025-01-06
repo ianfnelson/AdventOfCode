@@ -6,10 +6,10 @@ public readonly record struct Coordinate(int X, int Y)
     {
         return direction switch
         {
-            Direction.North => new Coordinate(X, Y - 1),
-            Direction.East => new Coordinate(X + 1, Y),
-            Direction.South => new Coordinate(X, Y + 1),
-            Direction.West => new Coordinate(X - 1, Y),
+            Direction.North => this with { Y = Y - 1 },
+            Direction.East => this with { X = X + 1 },
+            Direction.South => this with { Y = Y + 1 },
+            Direction.West => this with { X = X - 1 },
             _ => throw new ArgumentOutOfRangeException(nameof(direction), direction, null)
         };
     }

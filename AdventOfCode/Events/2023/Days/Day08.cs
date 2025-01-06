@@ -76,7 +76,7 @@ public class Day08 : DayBase
         return new Map(instructions, nodes);
     }
 
-    private IEnumerable<Node> ParseNodes(IEnumerable<string> lines)
+    private static IEnumerable<Node> ParseNodes(IEnumerable<string> lines)
     {
         foreach (var line in lines)
         {
