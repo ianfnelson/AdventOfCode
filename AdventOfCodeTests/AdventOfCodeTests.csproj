@@ -239,6 +239,10 @@
       <Content Include="Events\2023\TestData\24.txt">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
+      <None Remove="Events\2020\TestData\1.txt" />
+      <Content Include="Events\2020\TestData\1.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
       <None Remove="Events\2021\TestData\1.txt" />
       <Content Include="Events\2021\TestData\1.txt">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
