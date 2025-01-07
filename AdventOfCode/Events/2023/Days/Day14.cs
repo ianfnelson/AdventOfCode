@@ -7,21 +7,21 @@ public class Day14 : DayBase
 {
     protected override string Part1(IEnumerable<string> inputData)
     {
-        var platform = ParseInput(inputData);
+        var platform = ParseInput(inputData.ToList());
         TiltNorth(platform);
         return platform.LoadOnNorthBeams.ToString();
     }
 
     protected override string Part2(IEnumerable<string> inputData)
     {
-        var platform = ParseInput(inputData);
+        var platform = ParseInput(inputData.ToList());
         var platformString = platform.ToString();
 
         var configurations = new List<Tuple<string, int>>();
         
         do
         {
-            configurations.Add(new Tuple<string, int>(platform.ToString(), platform.LoadOnNorthBeams));
+            configurations.Add(new Tuple<string, int>(platformString, platform.LoadOnNorthBeams));
 
             TiltNorth(platform);
             TiltWest(platform);
@@ -37,11 +37,11 @@ public class Day14 : DayBase
         return match.Item2.ToString();
     }
 
-    public static Platform ParseInput(IEnumerable<string> inputData)
+    private static Platform ParseInput(IList<string> inputData)
     {
         var rocks = new List<Rock>();
         var y = 0;
-        var width = inputData.First().Length;
+        var width = inputData[0].Length;
         foreach (var row in inputData)
         {
             var matches = Regex.Matches(row, @"O|#");
@@ -58,7 +58,7 @@ public class Day14 : DayBase
     
     public override int Day => 14;
 
-    public void TiltNorth(Platform platform)
+    private static void TiltNorth(Platform platform)
     {
         var sets = platform.Rocks.GroupBy(rock => rock.X);
 
@@ -73,7 +73,7 @@ public class Day14 : DayBase
         }
     }
 
-    public void TiltEast(Platform platform)
+    private static void TiltEast(Platform platform)
     {
         var sets = platform.Rocks.GroupBy(rock => rock.Y);
 
@@ -87,8 +87,8 @@ public class Day14 : DayBase
             }
         }
     }
-    
-    public void TiltSouth(Platform platform)
+
+    private static void TiltSouth(Platform platform)
     {
         var sets = platform.Rocks.GroupBy(rock => rock.X);
 
@@ -102,8 +102,8 @@ public class Day14 : DayBase
             }
         }
     }
-    
-    public void TiltWest(Platform platform)
+
+    private static void TiltWest(Platform platform)
     {
         var sets = platform.Rocks.GroupBy(rock => rock.Y);
 
@@ -118,7 +118,7 @@ public class Day14 : DayBase
         }
     }
 
-    public class Platform(IList<Rock> rocks, int height, int width)
+    private class Platform(IList<Rock> rocks, int height, int width)
     {
         public int Height { get; } = height;
         public int Width { get; } = width;
@@ -139,7 +139,7 @@ public class Day14 : DayBase
         }
     }
 
-    public class Rock(RockType type, int x, int y)
+    private class Rock(RockType type, int x, int y)
     {
         public RockType Type { get; set; } = type;
 
@@ -148,7 +148,7 @@ public class Day14 : DayBase
         public int Y { get; set; } = y;
     }
 
-    public enum RockType
+    private enum RockType
     {
         Rounded,
         Cube

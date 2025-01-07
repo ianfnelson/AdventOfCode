@@ -65,7 +65,7 @@ public class Day08 : DayBase
         } while (true);
     }
 
-    private Map ParseMap(IEnumerable<string> inputData)
+    private static Map ParseMap(IEnumerable<string> inputData)
     {
         var lines = inputData.ToList();
 

@@ -1,43 +1,34 @@
+using AdventOfCode.Common;
+
 namespace AdventOfCode.Events._2023.Days;
 
 public class Day10 : DayBase
 {
-    private class Pipe(Coordinates coordinates, char pipeType)
+    private class Pipe(Coordinate coordinate, char pipeType)
     {
-        public Coordinates Coordinates { get; } = coordinates;
+        public Coordinate Coordinate { get; } = coordinate;
         public char PipeType { get; } = pipeType;
 
-        public IEnumerable<Coordinates> Connections
+        public IEnumerable<Coordinate> Connections
         {
             get
             {
                 return PipeType switch
                 {
-                    '|' => new[] { coordinates.North, coordinates.South },
-                    '-' => new[] { coordinates.East, coordinates.West },
-                    'L' => new[] { coordinates.North, coordinates.East },
-                    'J' => new[] { coordinates.West, coordinates.North },
-                    '7' => new[] { coordinates.West, coordinates.South },
-                    'F' => new[] { coordinates.South, coordinates.East },
-                    '.' => Array.Empty<Coordinates>(),
+                    '|' => new[] { Coordinate.Move(Direction.North), Coordinate.Move(Direction.South) },
+                    '-' => new[] { Coordinate.Move(Direction.East), Coordinate.Move(Direction.West) },
+                    'L' => new[] { Coordinate.Move(Direction.North), Coordinate.Move(Direction.East) },
+                    'J' => new[] { Coordinate.Move(Direction.West), Coordinate.Move(Direction.North) },
+                    '7' => new[] { Coordinate.Move(Direction.West), Coordinate.Move(Direction.South) },
+                    'F' => new[] { Coordinate.Move(Direction.South), Coordinate.Move(Direction.East) },
+                    '.' => Array.Empty<Coordinate>(),
                     _ => throw new InvalidDataException()
                 };
             }
         }
     }
 
-    private readonly struct Coordinates(int x, int y)
-    {
-        public int X { get; } = x;
-        public int Y { get; } = y;
-
-        public Coordinates North => new(X, Y - 1);
-        public Coordinates East => new(X+1, Y);
-        public Coordinates South => new(X, Y + 1);
-        public Coordinates West => new(X-1, Y);
-    }
-
-    private Dictionary<Coordinates, Pipe> _sketch;
+    private Dictionary<Coordinate, Pipe> _sketch;
 
     protected override string Part1(IEnumerable<string> inputData)
     {
@@ -46,10 +37,10 @@ public class Day10 : DayBase
         return CalculateLoopLength().ToString();
     }
 
-    private static Dictionary<Coordinates, Pipe> ParseSketch(IEnumerable<string> inputData)
+    private static Dictionary<Coordinate, Pipe> ParseSketch(IEnumerable<string> inputData)
     {
         return ParseSketchPipes(inputData)
-            .ToDictionary(x => x.Coordinates, x => x);
+            .ToDictionary(x => x.Coordinate, x => x);
     }
 
     private static IEnumerable<Pipe> ParseSketchPipes(IEnumerable<string> inputData)
@@ -60,7 +51,7 @@ public class Day10 : DayBase
             var xCoord = 0;
             foreach (var pipeType in line.ToCharArray())
             {
-                yield return new Pipe(new Coordinates(xCoord, yCoord), pipeType);
+                yield return new Pipe(new Coordinate(xCoord, yCoord), pipeType);
                 xCoord++;
             }
             yCoord++;
@@ -87,7 +78,7 @@ public class Day10 : DayBase
     private Pipe FindNextPipeInLoop(Pipe currentPipe, Pipe previousPipe)
     {
         var nextPipeCoordinates = currentPipe.Connections
-            .First(x => !x.Equals(previousPipe.Coordinates));
+            .First(x => !x.Equals(previousPipe.Coordinate));
         
         return _sketch[nextPipeCoordinates];
     }
@@ -95,9 +86,9 @@ public class Day10 : DayBase
     private Pipe PickAPipeConnectingToStartingPipe(Pipe startingPipe)
     {
         // Try pipe to the north
-        if (startingPipe.Coordinates.Y > 0)
+        if (startingPipe.Coordinate.Y > 0)
         {
-            var northPipe = _sketch[startingPipe.Coordinates.North];
+            var northPipe = _sketch[startingPipe.Coordinate.Move(Direction.North)];
             if (new[] { '|', '7', 'F' }.Contains(northPipe.PipeType))
             {
                 return northPipe;
@@ -105,9 +96,9 @@ public class Day10 : DayBase
         }
         
         // Try pipe to the west
-        if (startingPipe.Coordinates.X > 0)
+        if (startingPipe.Coordinate.X > 0)
         {
-            var westPipe = _sketch[startingPipe.Coordinates.West];
+            var westPipe = _sketch[startingPipe.Coordinate.Move(Direction.West)];
             if (new[] { '-', 'L', 'F' }.Contains(westPipe.PipeType))
             {
                 return westPipe;
@@ -115,9 +106,9 @@ public class Day10 : DayBase
         }
         
         // Try pipe to the east
-        if (startingPipe.Coordinates.X < _sketch.Keys.Select(x => x.X).Max())
+        if (startingPipe.Coordinate.X < _sketch.Keys.Select(x => x.X).Max())
         {
-            var eastPipe = _sketch[startingPipe.Coordinates.East];
+            var eastPipe = _sketch[startingPipe.Coordinate.Move(Direction.East)];
             if (new[] { '-', 'J', '7' }.Contains(eastPipe.PipeType))
             {
                 return eastPipe;
@@ -133,5 +124,4 @@ public class Day10 : DayBase
     }
 
     public override int Day => 10;
-
 }
