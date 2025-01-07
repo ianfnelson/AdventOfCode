@@ -25,10 +25,10 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Events\2021\Days\" />
-      <Folder Include="Events\2021\TestData\" />
       <Folder Include="Events\2022\TestData\" />
       <Folder Include="Events\2022\Days\" />
+      <Folder Include="Events\2021\Days\" />
+      <Folder Include="Events\2021\TestData\" />
       <Folder Include="Events\2023\TestData\" />
       <Folder Include="Events\2023\Days\" />
       <Folder Include="Events\2024\Days\" />
@@ -241,6 +241,10 @@
       </Content>
       <None Remove="Events\2020\TestData\1.txt" />
       <Content Include="Events\2020\TestData\1.txt">
+      <None Remove="Events\2021\TestData\1.txt" />
+      <Content Include="Events\2021\TestData\1.txt">
+      <None Remove="Events\2022\TestData\1.txt" />
+      <Content Include="Events\2022\TestData\1.txt">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
     </ItemGroup>
