@@ -134,7 +134,6 @@ public class Day02 : DayBase
                 2 => new Round(ParseElement(entry[0]), ParseOutcome(entry[2])),
                 _ => throw new ArgumentOutOfRangeException()
             };
-
         }
 
         private static Element ParseElement(char letter)
@@ -158,15 +157,15 @@ public class Day02 : DayBase
                 _ => throw new ArgumentOutOfRangeException()
             };
         }
-        
-        public enum Element
+
+        private enum Element
         {
             Rock,
             Paper,
             Scissors
         }
 
-        public enum Outcome
+        private enum Outcome
         {
             Loss,
             Draw,
