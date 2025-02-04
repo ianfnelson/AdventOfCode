@@ -5,7 +5,7 @@ public class Day04 : DayBase
     protected override string Part1(IEnumerable<string> inputData)
     {
         return ParseInput(inputData)
-            .Count(p => p.Item1.Contains(p.Item2) || p.Item2.Contains(p.Item1))
+            .Count(p => p.Item1.ContainsOrContainedBy(p.Item2))
             .ToString();
     }
 
@@ -34,9 +34,10 @@ public class Day04 : DayBase
 
         public int End { get; } = end;
 
-        public bool Contains(Range other)
+        public bool ContainsOrContainedBy(Range other)
         {
-            return Start <= other.Start && End >= other.End;
+            return (Start <= other.Start && End >= other.End) ||
+                   (other.Start <= Start && other.End >= End);
         }
 
         public bool Overlaps(Range other)
