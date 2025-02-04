@@ -2,7 +2,6 @@ using AdventOfCode.Events._2022.Days;
 
 namespace AdventOfCodeTests.Events._2022.Days;
 
-
 [TestFixture]
 public class Day04Tests
 {
