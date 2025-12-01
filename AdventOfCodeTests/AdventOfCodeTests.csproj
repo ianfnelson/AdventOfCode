@@ -268,6 +268,10 @@
       <Content Include="Events\2022\TestData\5.txt">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
+      <None Remove="Events\2025\TestData\1.txt" />
+      <Content Include="Events\2025\TestData\1.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
     </ItemGroup>
 
 </Project>
