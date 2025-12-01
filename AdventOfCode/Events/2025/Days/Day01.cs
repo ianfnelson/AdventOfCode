@@ -23,18 +23,35 @@ public class Day01 : DayBase
 
     protected override string Part2(IEnumerable<string> inputData)
     {
-        throw new NotImplementedException();
+        var rotations = ParseInputData(inputData);
+
+        var dial = new Dial(50);
+
+        foreach (var rotation in rotations)
+        {
+            dial.Rotate(rotation);
+        }
+
+        return dial.PassZeroCount.ToString();
     }
 
-    public class Dial(int position)
+    private class Dial(int position)
     {
         public int Position { get; private set; } = position;
+        public int PassZeroCount { get; private set; } = 0;
 
         public void Rotate(Rotation rotation)
         {
             var sign = rotation.Direction == Direction.Left ? -1 : 1;
+            var newPositionRaw = Position + sign * rotation.Clicks;
 
-            Position = (Position + sign * rotation.Clicks) % 100;
+            PassZeroCount += sign * (newPositionRaw / 100);
+            if (newPositionRaw <= 0 && Position > 0 || newPositionRaw >= 0 && Position < 0)
+            {
+                PassZeroCount++;
+            }
+            
+            Position = newPositionRaw % 100;
         }
     }
 
