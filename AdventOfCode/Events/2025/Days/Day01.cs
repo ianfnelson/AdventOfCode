@@ -8,15 +8,13 @@ public class Day01 : DayBase
 
         var dial = new Dial(50);
 
-        var positions = new List<int>();
-
         foreach (var rotation in rotations)
         {
             dial.Rotate(rotation);
-            positions.Add(dial.Position);
         }
         
-        return positions
+        return dial
+            .PositionHistory
             .Count(x => x==0)
             .ToString();
     }
@@ -38,7 +36,8 @@ public class Day01 : DayBase
     private class Dial(int position)
     {
         public int Position { get; private set; } = position;
-        public int PassZeroCount { get; private set; } = 0;
+        public List<int> PositionHistory { get; } = [position];
+        public int PassZeroCount { get; private set; }
 
         public void Rotate(Rotation rotation)
         {
@@ -52,10 +51,11 @@ public class Day01 : DayBase
             }
             
             Position = newPositionRaw % 100;
+            PositionHistory.Add(Position);
         }
     }
 
-    private IEnumerable<Rotation> ParseInputData(IEnumerable<string> inputData)
+    private static IEnumerable<Rotation> ParseInputData(IEnumerable<string> inputData)
     {
         foreach (var line in inputData)
         {
@@ -65,10 +65,10 @@ public class Day01 : DayBase
             yield return new Rotation(direction, clicks);
         }
     }
-    
-    public record Rotation(Direction Direction, int Clicks);
 
-    public enum Direction
+    private record Rotation(Direction Direction, int Clicks);
+
+    private enum Direction
     {
         Left,
         Right
