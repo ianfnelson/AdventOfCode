@@ -16,4 +16,24 @@ public readonly record struct Coordinate(int X, int Y)
     
     public static Coordinate operator +(Coordinate a, Coordinate b) => new(a.X + b.X, a.Y + b.Y);
     public static Coordinate operator -(Coordinate a, Coordinate b) => new(a.X - b.X, a.Y - b.Y);
+
+    /// <summary>
+    /// Return the coordinates of the eight positions immediately surrounding this one.
+    /// </summary>
+    public IEnumerable<Coordinate> SurroundingCoordinates
+    {
+        get
+        {
+            for (var xdelta = -1; xdelta <=1 ; xdelta++)
+            {
+                for (var ydelta = -1; ydelta <=1; ydelta++)
+                {
+                    if (xdelta != 0 || ydelta != 0)
+                    {
+                        yield return new Coordinate(X + xdelta, Y + ydelta);
+                    }
+                }
+            }
+        }
+    }
 }
