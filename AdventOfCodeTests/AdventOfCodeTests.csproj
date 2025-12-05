@@ -284,6 +284,14 @@
       <Content Include="Events\2025\TestData\4.txt">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
+      <Compile Remove="GlobalUsings.cs" />
+      <Content Include="GlobalUsings.cs">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Events\2025\TestData\5.txt" />
+      <Content Include="Events\2025\TestData\5.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
     </ItemGroup>
 
 </Project>
