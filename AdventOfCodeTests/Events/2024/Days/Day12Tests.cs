@@ -2,26 +2,27 @@ using AdventOfCode.Events._2024.Days;
 
 namespace AdventOfCodeTests.Events._2024.Days;
 
-[TestFixture]
 public class Day12Tests
 {
     private readonly Day12 _systemUnderTest = new();
 
-    [TestCase("12a.txt", "140")]
-    [TestCase("12b.txt", "772")]
-    [TestCase("12c.txt", "1930")]
+    [Theory]
+    [InlineData("12a.txt", "140")]
+    [InlineData("12b.txt", "772")]
+    [InlineData("12c.txt", "1930")]
     public void Part1Test(string filename, string expected)
     {
-        Assert.That(_systemUnderTest.Part1($"Events/2024/TestData/{filename}"), Is.EqualTo(expected));
+        Assert.Equal(expected, _systemUnderTest.Part1($"Events/2024/TestData/{filename}"));
     }
-    
-    [TestCase("12a.txt", "80")]
-    [TestCase("12b.txt", "436")]
-    [TestCase("12c.txt", "1206")]
-    [TestCase("12d.txt", "236")]
-    [TestCase("12e.txt", "368")]
+
+    [Theory]
+    [InlineData("12a.txt", "80")]
+    [InlineData("12b.txt", "436")]
+    [InlineData("12c.txt", "1206")]
+    [InlineData("12d.txt", "236")]
+    [InlineData("12e.txt", "368")]
     public void Part2Test(string filename, string expected)
     {
-        Assert.That(_systemUnderTest.Part2($"Events/2024/TestData/{filename}"), Is.EqualTo(expected));
+        Assert.Equal(expected, _systemUnderTest.Part2($"Events/2024/TestData/{filename}"));
     }
 }

@@ -3,7 +3,7 @@
 ## Stack
 
 - .NET 9.0, C# latest, Autofac DI
-- NUnit 4.5 (test framework), NUnit3TestAdapter, Microsoft.NET.Test.Sdk, coverlet.collector
+- xUnit 2.x (test framework), xunit.runner.visualstudio, Microsoft.NET.Test.Sdk, coverlet.collector
 
 ## Build & Test
 
@@ -36,8 +36,10 @@ dotnet run --project AdventOfCode 2024 15             # run specific day
 
 - Namespaces: `AdventOfCode.Events._{YEAR}.Days` (underscore prefix for numeric year)
 - Class names: `Day1`, `Day12` (no leading zeros)
-- Test classes: `Day1Tests`, `Day12Tests` with `[TestFixture]` attribute
+- Test classes: `Day1Tests`, `Day12Tests` (no attributes needed, xUnit auto-discovers)
 - Tests instantiate the day directly: `private readonly DayNN _systemUnderTest = new();`
+- Test methods: `[Fact]` for simple tests, `[Theory]` with `[InlineData]` for parameterized tests
+- Assertions: Use xUnit's `Assert.Equal(expected, actual)` pattern (note parameter order)
 - Test data files use letter suffixes for variants: `12a.txt`, `12b.txt`
 - Input/test data files must be added to `.csproj` with `CopyToOutputDirectory: PreserveNewest`
 - Both Part1 and Part2 return answers as `string`

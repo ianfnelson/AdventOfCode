@@ -2,28 +2,29 @@ using AdventOfCode.Events._2019.Days;
 
 namespace AdventOfCodeTests.Events._2019.Days;
 
-[TestFixture]
 public class Day01Tests
 {
-    [TestCase(12, 2)]
-    [TestCase(14, 2)]
-    [TestCase(1969, 654)]
-    [TestCase(100756, 33583)]
+    [Theory]
+    [InlineData(12, 2)]
+    [InlineData(14, 2)]
+    [InlineData(1969, 654)]
+    [InlineData(100756, 33583)]
     public void Module_FuelCalculation_Part1(int mass, int expectedFuel)
     {
         var sut = new Day01.Module(mass);
-        
-        Assert.That(sut.FuelRequirement(false), Is.EqualTo(expectedFuel));
+
+        Assert.Equal(expectedFuel, sut.FuelRequirement(false));
     }
-    
-    [TestCase(12, 2)]
-    [TestCase(14, 2)]
-    [TestCase(1969, 966)]
-    [TestCase(100756, 50346)]
+
+    [Theory]
+    [InlineData(12, 2)]
+    [InlineData(14, 2)]
+    [InlineData(1969, 966)]
+    [InlineData(100756, 50346)]
     public void Module_FuelCalculation_Part2(int mass, int expectedFuel)
     {
         var sut = new Day01.Module(mass);
-        
-        Assert.That(sut.FuelRequirement(true), Is.EqualTo(expectedFuel));
+
+        Assert.Equal(expectedFuel, sut.FuelRequirement(true));
     }
 }

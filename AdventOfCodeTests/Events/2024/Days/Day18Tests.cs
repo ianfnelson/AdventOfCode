@@ -3,10 +3,9 @@ using AdventOfCode.Events._2024.Days;
 
 namespace AdventOfCodeTests.Events._2024.Days;
 
-[TestFixture]
 public class Day18Tests
 {
-    [Test]
+    [Fact]
     public void Part1()
     {
         var inputData = File.ReadAllLines("Events/2024/TestData/18.txt");
@@ -14,10 +13,10 @@ public class Day18Tests
 
         var shortestPath = puzzle.ShortestPathAfter(12);
 
-        Assert.That(shortestPath, Is.EqualTo(22));
+        Assert.Equal(22, shortestPath);
     }
-    
-    [Test]
+
+    [Fact]
     public void Part2()
     {
         var inputData = File.ReadAllLines("Events/2024/TestData/18.txt");
@@ -25,6 +24,6 @@ public class Day18Tests
 
         var firstCutOff = puzzle.FirstCutOff();
 
-        Assert.That(firstCutOff, Is.EqualTo(new Coordinate(6,1)));
+        Assert.Equal(new Coordinate(6,1), firstCutOff);
     }
 }
