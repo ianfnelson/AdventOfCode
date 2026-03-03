@@ -2,20 +2,19 @@ using AdventOfCode.Events._2022.Days;
 
 namespace AdventOfCodeTests.Events._2022.Days;
 
-[TestFixture]
 public class Day01Tests
 {
     private readonly Day01 _systemUnderTest = new();
-    
-    [Test]
+
+    [Fact]
     public void Part1Test()
     {
-        Assert.That(_systemUnderTest.Part1("Events/2022/TestData/1.txt"), Is.EqualTo("24000"));
+        Assert.Equal("24000", _systemUnderTest.Part1("Events/2022/TestData/1.txt"));
     }
-    
-    [Test]
+
+    [Fact]
     public void Part2Test()
     {
-        Assert.That(_systemUnderTest.Part2("Events/2022/TestData/1.txt"), Is.EqualTo("45000"));
+        Assert.Equal("45000", _systemUnderTest.Part2("Events/2022/TestData/1.txt"));
     }
 }
