@@ -16,9 +16,6 @@
       <Folder Include="Events\2024\InputFiles\" />
     </ItemGroup>
 
-    <ItemGroup>
-      <PackageReference Include="Autofac" Version="9.0.0" />
-    </ItemGroup>
 
     <ItemGroup>
       <None Remove="Events\2024\InputFiles\1.txt" />
