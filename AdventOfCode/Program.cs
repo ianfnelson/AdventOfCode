@@ -1,23 +1,16 @@
 ﻿using System.Diagnostics;
 using System.Reflection;
 using AdventOfCode.Framework;
-using Autofac;
 
-var container = BuildContainer();
-
-var days = container.Resolve<IEnumerable<IDay>>();
+var days = Assembly.GetExecutingAssembly()
+    .GetTypes()
+    .Where(t => t is { IsClass: true, IsAbstract: false } && typeof(IDay).IsAssignableFrom(t))
+    .Select(t => (IDay)Activator.CreateInstance(t)!);
 var day = GetDay();
 Console.WriteLine("Year " + day.Year + " Day " + day.Day);
 var inputPath = $"Events/{day.Year}/InputFiles/{day.Day}.txt";
 DoPart(1, () => day.Part1(inputPath));
 DoPart(2, () => day.Part2(inputPath));
-
-IContainer BuildContainer()
-{
-    var builder = new ContainerBuilder();
-    builder.RegisterAssemblyTypes(Assembly.GetExecutingAssembly()).AsImplementedInterfaces();
-    return builder.Build();
-}
 
 IDay GetDay()
 {
