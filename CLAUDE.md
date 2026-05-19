@@ -3,7 +3,7 @@
 ## Stack
 
 - .NET 9.0, C# latest, Autofac DI
-- xUnit 2.x (test framework), xunit.runner.visualstudio, Microsoft.NET.Test.Sdk, coverlet.collector
+- xUnit 2.x (test framework), xunit.runner.visualstudio, Microsoft.NET.Test.Sdk
 
 ## Build & Test
 
